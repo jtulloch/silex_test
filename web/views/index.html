@@ -1,0 +1,27 @@
+<!doctype HTML>
+<html>
+  <head>
+  </head>
+  <body>
+  <h1>Hello</h1>
+
+  <script>
+    dojoConfig = {
+      parseOnLoad: true,
+      async: true,
+      baseUrl: 'http://192.168.4.251:4567/',
+      packages: [
+        { name: 'dojo', location: 'javascripts/dojo' },
+        { name: 'app', location: 'javascripts/app' }
+      ]
+    }
+  </script>
+
+  <script src="javascripts/dojo/dojo.js"></script>
+  <script>
+    require(['app/app'], function( app ) {
+      app.run();
+    });
+  </script>
+  </body>
+</html>
